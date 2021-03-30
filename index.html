@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Alejandro Pietry">
     <meta name="description" content="Olá, eu sou Alejandro Pietry, mas pode me chamar de Alê dos bugs">
     <meta name="author" content="Alejandro Pietry">
+    <meta itemprop="image" content="/img/AlejandroPietry.jpg">
     <meta name="keywords" content="HTML, CSS, JavaScript, dotnet, .net, csharp, c#, alejandro pietry, aspnet">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
@@ -13,8 +15,21 @@
 </head>
 <body>
     <div class="container">
-        <h1>Olá, eu sou Alejandro Pietry, mas pode me chamar de Alê dos bugs</h1>
-        <p>Tenho 20 anos e trabalho com desenvolvimento back-end com a plataforma .Net.</p>
+        <header>
+            <h1>Alejandro Pietry</h1>
+        </header>
+    </div>
+    <div class="container">
+
+        <div class="columns is-vcentered">
+            <div class="column is-offset-one-quarter">
+                <img src="/img/AlejandroPietry.jpg" alt="Alejandro Pietry">
+            </div>
+            <div class="column is-offset-one-quarter">
+                <h1>Olá, eu sou Alejandro Pietry, mas pode me chamar de Alê dos bugs</h1>
+                <p>Tenho 20 anos e trabalho com desenvolvimento back-end com a plataforma .Net.</p>        
+            </div>
+        </div>
         <div class="buttons">
             <button class="button is-success is-rounded" onclick="window.open('https://api.whatsapp.com/send?phone=5591991367966&text=Ol%C3%A1%20Alejandro!')">
                 <span class="icon">
@@ -32,7 +47,7 @@
                     Linkedin
                 </span>
             </button>
-            <button class="button is-rounded" onclick="window.open('https://github.com/AlejandroPietry')">
+            <button class="button dark is-rounded" onclick="window.open('https://github.com/AlejandroPietry')">
                 <span class="icon">
                     <i class="fab fa-github"></i>
                 </span>
