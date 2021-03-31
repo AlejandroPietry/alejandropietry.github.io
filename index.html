@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Olá, eu sou Alejandro Pietry, mas pode me chamar de Alê dos bugs">
+    <meta name="description" content="Olá, eu sou Alejandro Pietry, mas pode me chamar de AlêJota">
     <meta name="author" content="Alejandro Pietry">
-    <meta itemprop="image" content="img/AlejandroPietry.jpg">
+    <meta property="og:image" content="img/AlejandroPietry.jpg">
     <meta name="keywords" content="HTML, CSS, JavaScript, dotnet, .net, csharp, c#, alejandro pietry, aspnet">
     <title>Alejandro Pietry</title>
+    <link rel="shortcut icon" href="img/fav-icon.png">
     <link rel="stylesheet" href="all.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
 
@@ -24,9 +25,9 @@
     <!--navigation-bar---------------------------->
     <nav class="navigation">
         <!--logo-->
-        <a href="#" class="logo">
-            <img src="img/logo.png"/>
-        </a>
+        <h2>
+            Alejandro Pietry    
+        </h2>
         <!--menu-btn----->
         <input type="checkbox" class="menu-btn" id="menu-btn">
         <label for="menu-btn" class="menu-icon">
@@ -197,13 +198,11 @@
         <!--form----------->
         <form data-aos="fade-up">
             <!--full-name---->
-            <input type="text" name="fullname" placeholder="Full Name" required>
-            <!--email-------->
-            <input type="email" name="email" placeholder="Example@gmail.com" required>
+            <input type="text" name="fullname" id="fullname" placeholder="Nome completo" required>
             <!--write-something-->
-            <textarea name="message" placeholder="Write Something...." required></textarea>
+            <textarea name="message" id="message" placeholder="Mensagem...." required></textarea>
             <!--send-btn---->
-            <input type="submit" value="Send">
+            <input type="submit" value="Enviar" onclick="EnviarMensagemWpp()">
         </form>
     </section>
     <!--footer------------------->
@@ -277,6 +276,8 @@
  <!--scroll-animation-files----->
  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script src="all.js"></script>
+
  <script>
      AOS.init();
  </script>
