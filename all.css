@@ -237,7 +237,7 @@ a{
     border-radius: 10px;
 }
 .progress-line.html span{
-    width:90%;
+    width:100%;
 }
 .progress-line.css span{
     width:85%;
@@ -268,15 +268,7 @@ a{
     padding: 1px 8px;
     border-radius: 3px;
 }
-.progress-line.html span::after{
-    content:'90%';
-}
-.progress-line.css span::after{
-    content:'85%';
-}
-.progress-line.js span::after{
-    content:'80%';
-}
+
 .skill-img{
     width:600px;
     height: 600px;
