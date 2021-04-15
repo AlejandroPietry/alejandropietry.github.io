@@ -8,7 +8,7 @@ function EnviarMensagemWpp(){
         return null
     }
     else{
-        window.open("https://api.whatsapp.com/send?phone=5591991367966&text=" + mensagem +"\natt: " + nomePessoa);
+        window.open("https://api.whatsapp.com/send?phone=5591991367966&text=" + mensagem +"\ att: " + nomePessoa);
     }
 
 }
