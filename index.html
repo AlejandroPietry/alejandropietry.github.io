@@ -1,36 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 
 <head>
+    <title>Alejandro Pietry - Desenvolvedor .NET</title>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNMFE8X784"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'G-PNMFE8X784');
     </script>
-    <meta charset="UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="HTML, CSS, JavaScript, dotnet, .net, csharp, c#, alejandro pietry, aspnet">
-
-    <meta name="locale" content="pt_BR">
-    <meta id="config" data-app-version="2.0.92" data-call-tree-id="FkDlglkEgxaAYFREoysAAA=="
-        data-multiproduct-name="public-profile-frontend" data-service-name="public-profile-frontend"
-        data-browser-id="6e0b83c1-6c10-4fa6-874e-f91691de746c">
-    <meta id="google-analytics-config">
-    <link rel="canonical" href="https://alejandropietry.github.io">
-
-    <meta name="litmsProfileName" content="public-profile-frontend">
-    <meta name="ubba" content="https://static-exp1.licdn.com/sc/h/dtar8jxa0rti8pziench9ves1">
-    <meta name="platform" content="https://static-exp1.licdn.com/sc/h/9aebd2hcye5g1hm4b9b498z47">
-    <meta name="platform-worker" content="https://static-exp1.licdn.com/sc/h/f1rrg2iyfxtin8sa39nl5yphl">
-
+    <link rel="shortcut icon" href="img/fav-icon.jpg">
     <meta name="description" content="Olá, eu sou Alejandro Pietry, mas pode me chamar de AlêJota">
     <meta name="og:description" content="Olá, eu sou Alejandro Pietry, mas pode me chamar de AlêJota">
     <meta name="twitter:description" content="Olá, eu sou Alejandro Pietry, mas pode me chamar de AlêJota">
+
+    <meta name="locale" content="pt_BR">
+    <meta id="config" data-app-version="2.0.92" data-call-tree-id="FkDlglkEgxaAYFREoysAAA==" data-multiproduct-name="public-profile-frontend" data-service-name="public-profile-frontend" data-browser-id="6e0b83c1-6c10-4fa6-874e-f91691de746c">
+    <meta id="google-analytics-config">
+
     <meta property="og:title" content="Alejandro Pietry - Desenvolvedor .Net PL">
     <meta property="og:image" content="https://alejandropietry.github.io/img/Alejandro%20Pietry.jpg">
     <meta property="og:type" content="profile">
@@ -43,269 +41,162 @@
     <meta name="twitter:image" content="https://alejandropietry.github.io/img/Alejandro%20Pietry.jpg">
 
     <meta name="robots" content="noarchive">
-
-    <title>Alejandro Pietry</title>
-    <link rel="shortcut icon" href="img/fav-icon.jpg">
-    <link rel="stylesheet" href="all.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-
-    <!--style----->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
         body {
-            font-family: poppins;
+            background-color: #000000;
+            color: #00FF00;
+            font-family: "Courier New", monospace;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .marquee {
+            background: yellow;
+            color: red;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 48px;
+            text-shadow: 2px 2px 4px #FF00FF;
+            margin-bottom: 10px;
+        }
+
+        .blinking {
+            animation: blinker 1s linear infinite;
+            color: cyan;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .skills,
+        .contact,
+        .audio-player {
+            background: #111;
+            border: 2px dashed #0f0;
+            margin: 20px auto;
+            padding: 10px;
+            width: 80%;
+        }
+
+        a {
+            color: #00FFFF;
+            text-decoration: underline;
+        }
+
+        .gif-section {
+            margin: 20px 0;
+        }
+
+        .btn-3d {
+            background: linear-gradient(to bottom, #FF69B4, #8B008B);
+            border: 2px outset #FFFFFF;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 5px;
+            box-shadow: 4px 4px 0 #000000;
+            cursor: pointer;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            color: #00FF00;
+            font-weight: bold;
+        }
+
+        #counter {
+            font-size: 18px;
+            color: #FF00FF;
+            margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
-    <!--navigation-bar---------------------------->
-    <nav class="navigation">
-        <!--logo-->
-        <h2>
-            Alejandro Pietry
-        </h2>
-        <!--menu-btn----->
-        <input type="checkbox" class="menu-btn" id="menu-btn">
-        <label for="menu-btn" class="menu-icon">
-            <span class="nav-icon"></span>
-        </label>
-        <!--menu--->
-        <ul class="menu">
-            <li><a href="#main">Home</a></li>
-            <li><a href="#skills">Especialidades</a></li>
-            <li><a href="#services">Experiência</a></li>
-            <li><a href="#contact">Contato</a></li>
-        </ul>
-        <!--hire-me-btn----->
-        <a href="https://www.linkedin.com/in/alejandro-pietry-5383a3175/" class="hire-me">
-            LinkedIn
-            <!--icon-->
-            <i class="fas fa-chevron-right"></i>
-        </a>
-    </nav>
-    <!--main-section---------------------->
-    <section id="main">
-        <!--text-------------->
-        <div class="main-text">
-            <h1>Hey, me chamo Alejandro Pietry e sou desenvolvedor Back-End</h1>
-            <p>Tenho 22 anos e trabalho com desenvolvimento back-end com a plataforma .Net!</p>
-            <p>Durante minha carreira, tive a oportunidade de trabalhar em diversos projetos desafiadores e interessantes, o que me permitiu aprimorar minhas habilidades em programação, resolução de problemas e trabalho em equipe.</p>
-            <!--btns---------->
-            <div class="main-btns">
-                <a href="https://www.linkedin.com/in/alejandro-pietry-5383a3175/" class="download-cv-btn">LinkedIn</a>
-                <a href="https://github.com/AlejandroPietry" class="hire-me-btn">GitHub</a>
-            </div>
-        </div>
-        <!--mode-bg------------>
-        <div class="model-bg">
-            <img data-aos="fade" data-aos-duration="3000" src="img/model-bg.svg" />
-        </div>
-        <!--model-------------->
-        <div class="model">
-            <img src="img/model.jpg" />
-        </div>
-    </section>
-    <!--skills---------------------------->
-    <section id="skills">
-        <!--skills-text-section---->
-        <div class="skills-text-section">
-            <!--heading--------->
-            <div class="skill-heading" data-aos="fade">
-                <span>My Skills</span>
-                <h2>Minhas Especialidades</h2>
-            </div>
-            <!--skills-box-container--->
-            <div class="s-box-container">
-                <!--skill-box-->
-                <div class="skill-box" data-aos="fade-up">
-                    <!--box-icon---->
-                    <div class="s-box-icon">
-                        <i class="fab"><img class="icon"
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/512px-.NET_Core_Logo.svg.png"></i>
-                    </div>
-                    <!--box-text---->
-                    <div class="s-box-text">
-                        <strong>.Net - Cross-platform. Open source.</strong>
-                        <p>Experiência em desenvolvimento na plataforma .Net utilizando c#.</p>
-                        <div class="progress-line html"><span></span></div>
-                    </div>
-                </div>
-                <!--skill-box-->
-                <div class="skill-box" data-aos="fade-up">
-                    <!--box-icon---->
-                    <div class="s-box-icon">
-                        <i class="fab"><img class="icon"
-                                src="https://cdn.iconscout.com/icon/free/png-256/csharp-1-1175241.png"></i>
-                    </div>
-                    <!--box-text---->
-                    <div class="s-box-text">
-                        <strong>C#</strong>
-                        <p>Experiência em desenvolvimento utilizando c#.</p>
-                        <div class="progress-line html"><span></span></div>
-                    </div>
-                </div>
-                <!--skill-box-->
-                <div class="skill-box" data-aos="fade-up">
-                    <!--box-icon---->
-                    <div class="s-box-icon">
-                        <i class="fab fa-js"></i>
-                    </div>
-                    <!--box-text---->
-                    <div class="s-box-text">
-                        <strong>JavaScript(JS)</strong>
-                        <p>Experiência com JavaScript utilizando principalmente no front-end.</p>
-                        <!--progress-line---->
-                        <div class="progress-line html"><span></span></div>
-                    </div>
-                </div>
-                <!--skill-box-->
-                <div class="skill-box" data-aos="fade-up">
-                    <!--box-icon---->
-                    <div class="s-box-icon">
-                        <i class="fab"><img class="icon"
-                                src="https://icon-library.com/images/sql-icon/sql-icon-8.jpg"></i>
-                    </div>
-                    <!--box-text---->
-                    <div class="s-box-text">
-                        <strong>SQL</strong>
-                        <p>Experiência com SQL, utilizando principalmente para desenvolver relatórios e
-                            integrar com diversas fontes.</p>
-                        <!--progress-line---->
-                        <div class="progress-line html"><span></span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--skill-img-section---------->
-        <div class="skill-img">
-            <img data-aos="fade" src="img/skill2.png" />
-        </div>
-    </section>
-    <!--services----------------------------------->
-    <section id="services">
-        <!--heading----->
-        <strong class="services-heading" data-aos="fade-up">
-            Experiência Profissional</strong>
-        <!--services-box-container----->
-        <div class="services-box-container">
-            <!--service-box--------->
-            <div class="service-box" data-aos="fade-up">
-                <!--icon-->
-                <i class="fab"><img class="iconeEmpresas"
-                        src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/122015/untitled-1_84.png"></i>
-                <!--heading--->
-                <strong>IBM 06/2022 - o momento</strong>
-                <!--details-->
-                <p>
-                    A IBM oferece um extenso portfólio de serviços de tecnologia e consultoria, softwares de colaboração e análise preditiva, desenvolvimento e gerenciamento de sistemas, além dos mais avançados servidores e supercomputadores do mundo. 
-                </p>
-            </div>
-            <!--service-box--------->
-            <div class="service-box" data-aos="fade-up">
-                <!--icon-->
-                <i class="fab"><img class="iconeEmpresas"
-                        src="https://alejandropietry.github.io/img/EconetLogo.jpg"></i>
-                <!--heading--->
-                <strong>Econet Editora Empresarial 03/2021 - 05/2022</strong>
-                <!--details-->
-                <p>
-                    Empresa que disponibiliza consultoria e conteúdo nas áreas: fiscal, federal, contábil, trabalhista e
-                    comércio exterior. Onde participei do desenvolvimento de novas funcionalidades
-                    de API's complexas.
-                </p>
-            </div>
-            <!--service-box--------->
-            <div class="service-box" data-aos="fade-up">
-                <!--icon-->
-                <i class="fab"><img class="iconeEmpresas" src="https://alejandropietry.github.io/img/BneLogo.png"></i>
-                <!--heading--->
-                <strong>Banco Nacional de Empregos 12/2019 - 02/2021</strong>
-                <!--details-->
-                <p>
-                    Empresa de Ti que atua no setor de Rh. Onde participei do desenvolvimento, manutenção e publicação
-                    de aplicações desenvolvidas em .Net e .Net Core.
-                </p>
-            </div>
-        </div>
-    </section>
-    <!--get-in-touch------------------>
-    <section id="get-in-touch" data-aos="fade-up">
-        <span>Entre em contato!</span>
-        <a href="#contact"></a>
-    </section>
-    <!--contact--------------->
-    <section id="contact">
-        <!--form----------->
-        <form data-aos="fade-up">
-            <!--full-name---->
-            <input type="text" name="fullname" id="fullname" placeholder="Nome completo" required>
-            <!--write-something-->
-            <textarea name="message" id="message" placeholder="Mensagem...." required></textarea>
-            <!--send-btn---->
-            <input type="submit" value="Enviar" onclick="EnviarMensagemWpp()">
-        </form>
-    </section>
-    <!--footer------------------->
-    <footer>
-        <!--copyright-->
-        <span class="copyright">Alejandro Pietry - 39.564.518/0001-93</span>
-    </footer>
-    <!--<div class="container-sm">
-        <header>
-            <h1>Alejandro Pietry</h1>
-        </header>
-    </div>
-    <div class="container-sm">
+    <audio autoplay loop>
+        <source src="https://filesamples.com/samples/audio/midi/sample1.mid" type="audio/midi">
+        Seu navegador não suporta MIDI.
+    </audio>
 
-        <div class="columns is-vcentered">
-            <div class="column is-offset-one-quarter">
-                <img src="/img/AlejandroPietry.jpg" alt="Alejandro Pietry">
-            </div>
-            <div class="column is-offset-one-quarter">
-                <h1>Olá, eu sou Alejandro Pietry, mas pode me chamar de Alê dos bugs</h1>
-                <p>Tenho 20 anos e trabalho com desenvolvimento back-end com a plataforma .Net.</p>        
-            </div>
-        </div>
-        <div class="buttons">
-            <button class="button is-success is-rounded" onclick="window.open('https://api.whatsapp.com/send?phone=5591991367966&text=Ol%C3%A1%20Alejandro!')">
-                <span class="icon">
-                    <i class="fab fa-whatsapp"></i>
-                </span>
-                <span>
-                    WhatsApp
-                </span>
-            </button>
-            <button class="button is-info is-rounded" onclick="window.open('https://www.linkedin.com/in/alejandro-pietry-5383a3175/')">
-                <span class="icon">
-                    <i class="fab fa-linkedin"></i>
-                </span>
-                <span>
-                    Linkedin
-                </span>
-            </button>
-            <button class="button dark is-rounded" onclick="window.open('https://github.com/AlejandroPietry')">
-                <span class="icon">
-                    <i class="fab fa-github"></i>
-                </span>
-                <span>
-                    GitHub
-                </span>
-            </button>
-        </div>
+    <div class="marquee">
+        <marquee behavior="scroll" direction="left">Bem-vindo ao site do Alejandro Backend! Trabalhando com .NET desde 2019!</marquee>
     </div>
--->
+
+    <div class="container">
+
+
+        <h1 class="blinking">Alejandro Backend</h1>
+        <p><strong>Desenvolvedor .NET Pleno</strong></p>
+
+        <div class="skills">
+            <h2>Minhas Skills:</h2>
+            <ul>
+                <li>.NET Framework 2.0 até .Net Core 9.0</li>
+                <li>Stored Procedures Muitoo Braba</li>
+                <li>APIs REST com muito IF</li>
+                <li>Debug com Console.WriteLine</li>
+                <li>Documentação no bloco de notas</li>
+                <li>Master em copiar stackoverflow sem deixar rastros</li>
+                <li>Campeão regional de dar F5 em produção</li>
+                <li>DOMinador do Ctrl+C Ctrl+V</li>
+                <li>Especialista em fechar e abrir o Visual Studio pra "limpar cache"</li>
+                <li>Capacitado em explicar bugs como "problema de permissão"</li>
+            </ul>
+        </div>
+
+
+
+        <div class="contact">
+            <h2>Contato:</h2>
+            <p>Email: <a href="mailto:pietrytrindade12@gmail.com">pietrytrindade12@gmail.com</a></p>
+            <p>MSN: joao.backend@hotmail.com</p>
+            <p>Orkut: Em breve</p>
+        </div>
+        <div class="audio-player">
+            <h2>Playlist da Produtividade:</h2>
+            <audio controls>
+                <source src="https://filesamples.com/samples/audio/mp3/sample3.mp3" type="audio/mpeg">
+                Seu navegador não suporta o player de áudio.
+            </audio>
+            <ul>
+                <li>Lo-fi C# Beats - `sample3.mp3`</li>
+                <li>Sintonia ASP.NET Clássico - (adicione seu arquivo)</li>
+                <li>SQL Slow Jamz - (adicione seu arquivo)</li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <a href="https://github.com/joaobackend" target="_blank">GitHub</a> |
+            <a href="https://linkedin.com/in/joaobackend" target="_blank">LinkedIn</a>
+        </div>
+
+        <div id="counter">Você é o visitante nº <span id="visit-count">1</span></div>
+
+        <button class="btn-3d">Clique Aqui</button>
+        <button class="btn-3d">Ver Portfólio</button>
+    </div>
+
+    <script>
+        let count = localStorage.getItem('visitorCount') || 0;
+        count++;
+        localStorage.setItem('visitorCount', count);
+        document.getElementById('visit-count').innerText = count;
+    </script>
 </body>
 
 </html>
-<!--using FontAwesome--------------->
-<script crossorigin="anonymous" src="https://kit.fontawesome.com/c8e4d183c2.js"></script>
-<!--scroll-animation-files----->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="all.js"></script>
-
-<script>
-    AOS.init();
-</script>
